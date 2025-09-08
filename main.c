@@ -4,13 +4,10 @@
 
 int calculate(int choice, int a, int b)
 {
-    if (choice == 1) {
-        return (a+b);
-    } else if (choice == 2) {
-        return (a-b);
-    } else if (choice == 3) {
-        return (a*b);
-    } else if (choice == 4) {
+    if (choice == 1) {return (a+b);}
+    else if (choice == 2) {return (a-b);}
+    else if (choice == 3) {return (a*b);}
+    else if (choice == 4) {
         if (b != 0) {
             return (a/b);
         } else {
