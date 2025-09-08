@@ -1,5 +1,6 @@
 ﻿#include <stdio.h>
 #include <stdlib.h>
+#include <windows.h>
 
 int calculate(int choice, int a, int b)
 {
@@ -37,14 +38,33 @@ int main(void)
 
     scanf("%i", &choice);
 
-    if (choice > 4)
-    {
+    if (choice > 4) {
         printf("Choice invalid. Please restart and try again.\n");
         return 1;
-    } else
-    {
-        printf("Excellent choice! Now what numbers should I work with?\n");
     }
+
+    printf("Excellent choice! Now what numbers should I work with?\n");
+    printf("Please choose the first number:\n");
+
+    scanf("%i", &num1);
+
+    printf("You chose: %i. Now what is the second number?\n", num1);
+
+    scanf("%i", &num2);
+
+    printf("You chose %i. Allow me to calculate this. It might take some time\n", num2);
+
+    for (int i = 0; i < 10; i++) {
+        printf(".");
+        Sleep(400);
+    }
+    printf("\n");
+
+    result = calculate(choice, num1, num2);
+
+    printf("Thanks for waiting!\n");
+    printf("The result is: %i", result);
+
 
 
     return 0;
